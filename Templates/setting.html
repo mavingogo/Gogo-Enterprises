@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Gogo's Enterprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Dark Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gogo's Enterprise</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class='bx bx-grid-alt'></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html"><i class='bx bx-box'></i> <span>Inventory</span></a></li>
+                <li><a href="reporting.html"><i class='bx bx-line-chart'></i> <span>Sales</span></a></li>
+                <li><a href="users.html"><i class='bx bx-user'></i> <span>Customers</span></a></li>
+                <li><a href="setting.html" class="active"><i class='bx bx-cog'></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="settings-page-wrapper">
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1 class="page-title">Settings</h1>
+                    <div class="header-actions">
+                        <span style="font-size:0.875rem;color:#6b7280;">Last saved: Today, 9:30 AM</span>
+                    </div>
+                </div>
+
+                <!-- Settings Layout -->
+                <div class="settings-page-layout">
+
+                    <!-- Left Tab Navigation -->
+                    <nav class="settings-tab-nav">
+                        <div class="settings-tab-nav-header">
+                            <h3>Preferences</h3>
+                        </div>
+                        <div class="tab-nav-item active" data-tab="profile">
+                            <i class='bx bx-user-circle'></i>
+                            <span>Business Profile</span>
+                        </div>
+                        <div class="tab-nav-item" data-tab="notifications">
+                            <i class='bx bx-bell'></i>
+                            <span>Notifications</span>
+                        </div>
+                        <div class="tab-nav-item" data-tab="appearance">
+                            <i class='bx bx-palette'></i>
+                            <span>Appearance</span>
+                        </div>
+                        <div class="tab-nav-item" data-tab="billing">
+                            <i class='bx bx-credit-card'></i>
+                            <span>Billing & Plan</span>
+                        </div>
+                        <div class="tab-nav-item" data-tab="integrations">
+                            <i class='bx bx-plug'></i>
+                            <span>Integrations</span>
+                        </div>
+                    </nav>
+
+                    <!-- Right Panels -->
+                    <div class="settings-panels">
+
+                        <!-- ── PANEL: Business Profile ── -->
+                        <div class="settings-panel active" id="panel-profile">
+
+                            <!-- Avatar -->
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-store'></i>
+                                    <div>
+                                        <h3>Business Profile</h3>
+                                        <p>Manage your company information and contact details</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="profile-avatar-area">
+                                        <div class="big-avatar">GE</div>
+                                        <div class="avatar-info">
+                                            <h4>Gogo's Enterprise</h4>
+                                            <p>Business logo · JPG, PNG or SVG · Max 2MB</p>
+                                            <button class="btn-upload"><i class='bx bx-upload'></i> Upload Logo</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Business Name <span
+                                                    class="required">*</span></label>
+                                            <input type="text" class="form-input" value="Gogo's Enterprise">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Registration Number</label>
+                                            <input type="text" class="form-input" value="GOGO-2024-001">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Business Email <span
+                                                    class="required">*</span></label>
+                                            <input type="email" class="form-input" value="info@gogoenterprise.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-input" value="+254 700 000 000">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Industry</label>
+                                            <select class="form-select">
+                                                <option selected>Retail & Wholesale</option>
+                                                <option>Manufacturing</option>
+                                                <option>Technology</option>
+                                                <option>Services</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Currency</label>
+                                            <select class="form-select">
+                                                <option selected>KES – Kenyan Shilling</option>
+                                                <option>USD – US Dollar</option>
+                                                <option>EUR – Euro</option>
+                                                <option>UGX – Ugandan Shilling</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group full-width">
+                                            <label class="form-label">Business Address</label>
+                                            <input type="text" class="form-input" value="Tom Mboya St, Nairobi, Kenya">
+                                        </div>
+                                        <div class="form-group full-width">
+                                            <label class="form-label">Business Description</label>
+                                            <textarea
+                                                class="form-textarea">Gogo's Enterprise is a leading supplier of office furniture, electronics, and supplies in Nairobi, Kenya.</textarea>
+                                            <span class="form-hint">Briefly describe what your business does (used in
+                                                reports and receipts).</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button class="btn-save"
+                                            onclick="showToast('Business profile saved successfully')"><i
+                                                class='bx bx-check'></i> Save Changes</button>
+                                        <button class="btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── PANEL: Notifications ── -->
+                        <div class="settings-panel" id="panel-notifications">
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-broadcast'></i>
+                                    <div>
+                                        <h3>Notification Channels</h3>
+                                        <p>Choose how you want to receive alerts</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="channel-grid">
+                                        <div class="channel-card selected" onclick="toggleChannel(this)">
+                                            <i class='bx bx-envelope'></i>
+                                            <span>Email</span>
+                                        </div>
+                                        <div class="channel-card selected" onclick="toggleChannel(this)">
+                                            <i class='bx bx-mobile'></i>
+                                            <span>SMS</span>
+                                        </div>
+                                        <div class="channel-card" onclick="toggleChannel(this)">
+                                            <i class='bx bx-bell'></i>
+                                            <span>In-App</span>
+                                        </div>
+                                        <div class="channel-card" onclick="toggleChannel(this)">
+                                            <i class='bx bxl-whatsapp'></i>
+                                            <span>WhatsApp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-slider-alt'></i>
+                                    <div>
+                                        <h3>Notification Preferences</h3>
+                                        <p>Toggle specific alert types on or off</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>Low Stock Alerts</h4>
+                                            <p>Notify when a product falls below the minimum threshold</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>New Orders</h4>
+                                            <p>Receive an alert when a new customer order is placed</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>Daily Sales Summary</h4>
+                                            <p>Get a daily digest of your sales performance</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>Failed Login Attempts</h4>
+                                            <p>Alert on suspicious login activity or failed attempts</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>Weekly Reports</h4>
+                                            <p>Receive a weekly summary of inventory and sales data</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div class="toggle-info">
+                                            <h4>Promotional & Marketing</h4>
+                                            <p>Updates about new features and product announcements</p>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button class="btn-save"
+                                            onclick="showToast('Notification preferences saved')"><i
+                                                class='bx bx-check'></i> Save Preferences</button>
+                                        <button class="btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── PANEL: Appearance ── -->
+                        <div class="settings-panel" id="panel-appearance">
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-brush'></i>
+                                    <div>
+                                        <h3>Theme</h3>
+                                        <p>Select the colour scheme for your dashboard</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="theme-grid">
+                                        <div class="theme-option theme-light selected" onclick="selectTheme(this)">
+                                            <div class="theme-preview">
+                                                <div class="theme-preview-sidebar"></div>
+                                                <div class="theme-preview-content"></div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <span>Light (Default)</span>
+                                                <div class="theme-check"></div>
+                                            </div>
+                                        </div>
+                                        <div class="theme-option theme-dark" onclick="selectTheme(this)">
+                                            <div class="theme-preview">
+                                                <div class="theme-preview-sidebar"></div>
+                                                <div class="theme-preview-content"></div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <span>Dark</span>
+                                                <div class="theme-check"></div>
+                                            </div>
+                                        </div>
+                                        <div class="theme-option theme-blue" onclick="selectTheme(this)">
+                                            <div class="theme-preview">
+                                                <div class="theme-preview-sidebar"></div>
+                                                <div class="theme-preview-content"></div>
+                                            </div>
+                                            <div class="theme-label">
+                                                <span>Ocean Blue</span>
+                                                <div class="theme-check"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-text'></i>
+                                    <div>
+                                        <h3>Display Preferences</h3>
+                                        <p>Adjust layout density and text size</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Font Size</label>
+                                            <select class="form-select">
+                                                <option>Small (13px)</option>
+                                                <option selected>Medium (14px)</option>
+                                                <option>Large (16px)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Table Density</label>
+                                            <select class="form-select">
+                                                <option>Compact</option>
+                                                <option selected>Comfortable</option>
+                                                <option>Spacious</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Date Format</label>
+                                            <select class="form-select">
+                                                <option selected>DD/MM/YYYY</option>
+                                                <option>MM/DD/YYYY</option>
+                                                <option>YYYY-MM-DD</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Language</label>
+                                            <select class="form-select">
+                                                <option selected>English (Kenya)</option>
+                                                <option>Swahili</option>
+                                                <option>English (UK)</option>
+                                                <option>English (US)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button class="btn-save" onclick="showToast('Display preferences saved')"><i
+                                                class='bx bx-check'></i> Save Preferences</button>
+                                        <button class="btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── PANEL: Billing ── -->
+                        <div class="settings-panel" id="panel-billing">
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-receipt'></i>
+                                    <div>
+                                        <h3>Current Plan</h3>
+                                        <p>Manage your subscription and billing information</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <div class="current-plan-banner">
+                                        <div>
+                                            <div class="plan-info">
+                                                <h3>Business Pro Plan</h3>
+                                                <p>Renews on 1st June, 2026</p>
+                                            </div>
+                                            <button class="btn-upgrade">Upgrade to Enterprise</button>
+                                        </div>
+                                        <div class="plan-price">
+                                            <div class="price">KES 4,999</div>
+                                            <div class="period">/ month</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="billing-features">
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Up to 5
+                                            users</div>
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Unlimited
+                                            inventory items</div>
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Advanced
+                                            sales reports</div>
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Email & SMS
+                                            notifications</div>
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Data export
+                                            (CSV, PDF)</div>
+                                        <div class="billing-feature-item"><i class='bx bx-check-circle'></i> Priority
+                                            email support</div>
+                                    </div>
+
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Payment Method</label>
+                                            <input type="text" class="form-input" value="M-Pesa — 0700 *** *** "
+                                                readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Billing Email</label>
+                                            <input type="email" class="form-input" value="billing@gogoenterprise.com">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button class="btn-save" onclick="showToast('Billing details updated')"><i
+                                                class='bx bx-check'></i> Update Billing</button>
+                                        <button class="btn-cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Invoice History -->
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-file-blank'></i>
+                                    <div>
+                                        <h3>Invoice History</h3>
+                                        <p>Download past invoices for your records</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body" style="padding:0;">
+                                    <table class="invoice-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Invoice</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>INV-2026-004</td>
+                                                <td>1 Apr 2026</td>
+                                                <td>KES 4,999</td>
+                                                <td><span class="badge badge-in-stock">Paid</span></td>
+                                                <td><button class="btn-download-invoice"><i class='bx bx-download'></i>
+                                                        Download</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>INV-2026-003</td>
+                                                <td>1 Mar 2026</td>
+                                                <td>KES 4,999</td>
+                                                <td><span class="badge badge-in-stock">Paid</span></td>
+                                                <td><button class="btn-download-invoice"><i class='bx bx-download'></i>
+                                                        Download</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>INV-2026-002</td>
+                                                <td>1 Feb 2026</td>
+                                                <td>KES 4,999</td>
+                                                <td><span class="badge badge-in-stock">Paid</span></td>
+                                                <td><button class="btn-download-invoice"><i class='bx bx-download'></i>
+                                                        Download</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>INV-2026-001</td>
+                                                <td>1 Jan 2026</td>
+                                                <td>KES 4,999</td>
+                                                <td><span class="badge badge-in-stock">Paid</span></td>
+                                                <td><button class="btn-download-invoice"><i class='bx bx-download'></i>
+                                                        Download</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── PANEL: Integrations ── -->
+                        <div class="settings-panel" id="panel-integrations">
+
+                            <div class="settings-section-card">
+                                <div class="section-card-header">
+                                    <i class='bx bx-plug'></i>
+                                    <div>
+                                        <h3>Connected Integrations</h3>
+                                        <p>Link third-party tools to streamline your workflow</p>
+                                    </div>
+                                </div>
+                                <div class="section-card-body">
+                                    <!-- Integration Items -->
+                                    <div class="toggle-row">
+                                        <div style="display:flex;align-items:center;gap:1rem;">
+                                            <div
+                                                style="width:40px;height:40px;border-radius:0.5rem;background:#e0f2fe;display:flex;align-items:center;justify-content:center;color:#0369a1;font-size:1.3rem;">
+                                                <i class='bx bxl-whatsapp'
+                                                    style="color:#25d366;background:#e7fce8;border-radius:0.5rem;"></i>
+                                            </div>
+                                            <div class="toggle-info">
+                                                <h4>WhatsApp Business</h4>
+                                                <p>Send order confirmations and stock alerts via WhatsApp</p>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div style="display:flex;align-items:center;gap:1rem;">
+                                            <div
+                                                style="width:40px;height:40px;border-radius:0.5rem;background:#fff3cd;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                                <i class='bx bxl-gmail' style="color:#ea4335;"></i>
+                                            </div>
+                                            <div class="toggle-info">
+                                                <h4>Gmail / SMTP</h4>
+                                                <p>Send automated emails and invoices directly from Gmail</p>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div style="display:flex;align-items:center;gap:1rem;">
+                                            <div
+                                                style="width:40px;height:40px;border-radius:0.5rem;background:#f3e8ff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                                <i class='bx bx-spreadsheet' style="color:#7c3aed;"></i>
+                                            </div>
+                                            <div class="toggle-info">
+                                                <h4>Google Sheets Export</h4>
+                                                <p>Auto-export daily sales and inventory data to Google Sheets</p>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="toggle-row">
+                                        <div style="display:flex;align-items:center;gap:1rem;">
+                                            <div
+                                                style="width:40px;height:40px;border-radius:0.5rem;background:#e0f2fe;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                                <i class='bx bx-phone-call' style="color:#0369a1;"></i>
+                                            </div>
+                                            <div class="toggle-info">
+                                                <h4>Africa's Talking SMS</h4>
+                                                <p>Send SMS alerts to customers and staff via Africa's Talking</p>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button class="btn-save" onclick="showToast('Integration settings saved')"><i
+                                                class='bx bx-check'></i> Save Integrations</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Danger Zone -->
+                            <div class="danger-zone">
+                                <div class="danger-zone-header">
+                                    <i class='bx bx-error-alt'></i>
+                                    <h3>Danger Zone</h3>
+                                </div>
+                                <div class="danger-zone-body">
+                                    <div class="danger-action">
+                                        <div class="danger-action-info">
+                                            <h4>Reset All Settings</h4>
+                                            <p>Restore all settings to factory defaults. This cannot be undone.</p>
+                                        </div>
+                                        <button class="btn-danger">Reset Settings</button>
+                                    </div>
+                                    <div class="danger-action">
+                                        <div class="danger-action-info">
+                                            <h4>Export All Data</h4>
+                                            <p>Download a full export of all business data as a ZIP archive.</p>
+                                        </div>
+                                        <button class="btn-danger" style="border-color:#f59e0b;color:#f59e0b;"
+                                            onmouseover="this.style.background='#f59e0b';this.style.color='white'"
+                                            onmouseout="this.style.background='white';this.style.color='#f59e0b'">Export
+                                            Data</button>
+                                    </div>
+                                    <div class="danger-action">
+                                        <div class="danger-action-info">
+                                            <h4>Delete Business Account</h4>
+                                            <p>Permanently delete this account and all associated data.</p>
+                                        </div>
+                                        <button class="btn-danger">Delete Account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.settings-panels -->
+                </div><!-- /.settings-page-layout -->
+            </div><!-- /.settings-page-wrapper -->
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class='bx bx-check-circle'></i>
+        <span id="toast-msg">Changes saved successfully</span>
+    </div>
+
+    <script>
+        // Tab switching
+        const tabItems = document.querySelectorAll('.tab-nav-item');
+        const panels = document.querySelectorAll('.settings-panel');
+
+        tabItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const target = item.dataset.tab;
+
+                tabItems.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+
+                item.classList.add('active');
+                document.getElementById('panel-' + target).classList.add('active');
+            });
+        });
+
+        // Notification channel toggle
+        function toggleChannel(el) {
+            el.classList.toggle('selected');
+        }
+
+        // Theme selection
+        function selectTheme(el) {
+            document.querySelectorAll('.theme-option').forEach(t => t.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        // Toast notification
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+    </script>
+</body>
+
+</html>

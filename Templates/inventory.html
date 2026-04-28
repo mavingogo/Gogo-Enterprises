@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inventory Page Specific Styles */
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Dark Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gogo's Enterprise</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class='bx bx-grid-alt'></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html" class="active"><i class='bx bx-box'></i> <span>Inventory</span></a></li>
+                <li><a href="reporting.html"><i class='bx bx-line-chart'></i> <span>Sales</span></a></li>
+                <li><a href="users.html"><i class='bx bx-user'></i> <span>Customers</span></a></li>
+                <li><a href="setting.html"><i class='bx bx-cog'></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Inventory Management</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search products by name...">
+                    </div>
+                    <button class="btn-add">
+                        <i class='bx bx-plus'></i>
+                        Add New Product
+                    </button>
+                </div>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="inventory-table">
+                <div class="table-header">
+                    <h3>Product Inventory</h3>
+                    <div class="table-filters">
+                        <select class="filter-select">
+                            <option>All Categories</option>
+                            <option>Electronics</option>
+                            <option>Furniture</option>
+                            <option>Office Supplies</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>In Stock</option>
+                            <option>Low Stock</option>
+                            <option>Out of Stock</option>
+                        </select>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Stock Level</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PRD-001</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-laptop'></i></div>
+                                    <div>
+                                        <div class="product-name">Office Workstation Pro</div>
+                                        <div class="product-id">Dell OptiPlex 7090</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Electronics</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">45</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill high" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-in-stock">In Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-002</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-chair'></i></div>
+                                    <div>
+                                        <div class="product-name">Ergonomic Mesh Chair</div>
+                                        <div class="product-id">Herman Miller Aeron</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Furniture</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">12</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill low" style="width: 20%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-low-stock">Low Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-003</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-printer'></i></div>
+                                    <div>
+                                        <div class="product-name">Wireless Printer</div>
+                                        <div class="product-id">HP LaserJet Pro</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Electronics</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">28</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill high" style="width: 56%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-in-stock">In Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-004</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-notebook'></i></div>
+                                    <div>
+                                        <div class="product-name">A4 Copy Paper (Ream)</div>
+                                        <div class="product-id">Double A Premium</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Office Supplies</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">5</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill low" style="width: 8%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-low-stock">Low Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-005</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-desktop'></i></div>
+                                    <div>
+                                        <div class="product-name">27" 4K Monitor</div>
+                                        <div class="product-id">LG UltraFine 27UK850</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Electronics</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">0</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill low" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-out-of-stock">Out of Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-006</td>
+                            <td>
+                                <div class="product-info">
+                                    <div class="product-icon"><i class='bx bx-file'></i></div>
+                                    <div>
+                                        <div class="product-name">Filing Cabinet</div>
+                                        <div class="product-id">4-Drawer Metal</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="category-tag">Furniture</span></td>
+                            <td>
+                                <div class="stock-level">
+                                    <span class="stock-number">33</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill high" style="width: 66%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-in-stock">In Stock</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn btn-edit"><i class='bx bx-edit'></i></button>
+                                    <button class="action-btn btn-delete"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <div class="pagination-info">Showing 1-6 of 1,432 products</div>
+                    <div class="pagination-buttons">
+                        <button class="page-btn">Previous</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">...</button>
+                        <button class="page-btn">239</button>
+                        <button class="page-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

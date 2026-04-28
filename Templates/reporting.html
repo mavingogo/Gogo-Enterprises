@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporting - Gogo's Enterprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reporting Page Specific Styles */
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Dark Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gogo's Enterprise</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class='bx bx-grid-alt'></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html"><i class='bx bx-box'></i> <span>Inventory</span></a></li>
+                <li><a href="reporting.html"><i class='bx bx-line-chart'></i> <span>Sales</span></a></li>
+                <li><a href="users.html"><i class='bx bx-user'></i> <span>Customers</span></a></li>
+                <li><a href="setting.html"><i class='bx bx-cog'></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Reporting Dashboard</h1>
+                <div class="header-actions">
+                    <div class="date-range-picker">
+                        <i class='bx bx-calendar'></i>
+                        <input type="date" value="2026-04-01">
+                        <span>to</span>
+                        <input type="date" value="2026-04-26">
+                    </div>
+                    <button class="btn-export">
+                        <i class='bx bx-download'></i>
+                        Export Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Report Summary Cards -->
+            <div class="report-summary">
+                <div class="summary-card">
+                    <h4>Total Revenue</h4>
+                    <div class="value">KES 3,847,500</div>
+                    <div class="change positive">
+                        <i class='bx bx-trending-up'></i>
+                        +12.5% from last month
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h4>Total Orders</h4>
+                    <div class="value">1,247</div>
+                    <div class="change positive">
+                        <i class='bx bx-trending-up'></i>
+                        +8.3% from last month
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h4>Products Sold</h4>
+                    <div class="value">4,892</div>
+                    <div class="change negative">
+                        <i class='bx bx-trending-down'></i>
+                        -2.1% from last month
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h4>Avg. Order Value</h4>
+                    <div class="value">KES 3,085</div>
+                    <div class="change positive">
+                        <i class='bx bx-trending-up'></i>
+                        +15.2% from last month
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Sections -->
+            <div class="report-sections">
+                <!-- Sales Report -->
+                <div class="report-section">
+                    <div class="section-header">
+                        <h3><i class='bx bx-bar-chart-alt-2'></i> Sales Report</h3>
+                        <div class="section-actions">
+                            <button class="section-btn active">Daily</button>
+                            <button class="section-btn">Weekly</button>
+                            <button class="section-btn">Monthly</button>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="sales-metrics">
+                            <div class="metric-item">
+                                <span class="metric-label">Today's Sales</span>
+                                <span class="metric-value">KES 124,500</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Weekly Target</span>
+                                <span class="metric-value">KES 850,000</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Achieved</span>
+                                <span class="metric-value">KES 723,400</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Conversion Rate</span>
+                                <span class="metric-value">3.2%</span>
+                            </div>
+                        </div>
+
+                        <!-- Bar Chart - Sales vs Target -->
+                        <div class="bar-chart">
+                            <div class="chart-title">Sales Performance vs Target</div>
+
+                            <div class="bar-item">
+                                <div class="bar-label">
+                                    <span>Week 1</span>
+                                    <span>KES 165,000 / KES 200,000</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill sales" style="width: 82%;">82%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar-label">
+                                    <span>Week 2</span>
+                                    <span>KES 198,500 / KES 200,000</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill sales" style="width: 99%;">99%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar-label">
+                                    <span>Week 3</span>
+                                    <span>KES 187,400 / KES 225,000</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill target" style="width: 83%;">83%</div>
+                                </div>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar-label">
+                                    <span>Week 4</span>
+                                    <span>KES 172,500 / KES 225,000</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill over" style="width: 77%;">77%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Target Achievement -->
+                        <div class="target-achievement">
+                            <h4><i class='bx bx-target-lock'></i> Target Achievement</h4>
+                            <div class="target-percentage">85%</div>
+                            <p style="font-size: 0.875rem; color: #065f46; margin-top: 0.5rem;">Sales target on track
+                                for this month</p>
+                        </div>
+
+                        <!-- Decision Making Highlights -->
+                        <div class="decision-highlights">
+                            <h4><i class='bx bx-lightbulb'></i> Faster Decision Making</h4>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>Electronics category exceeding targets by 15%</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>Consider increasing Furniture inventory for Week 5</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>Office Supplies showing 23% growth - prioritize restocking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stock Report -->
+                <div class="report-section">
+                    <div class="section-header">
+                        <h3><i class='bx bx-package'></i> Stock Report</h3>
+                        <div class="section-actions">
+                            <button class="section-btn active">All</button>
+                            <button class="section-btn">Low</button>
+                            <button class="section-btn">Out</button>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="stock-summary-grid">
+                            <div class="stock-summary-item in-stock">
+                                <div class="icon"><i class='bx bx-check-circle'></i></div>
+                                <div class="count">1,247</div>
+                                <div class="label">In Stock</div>
+                            </div>
+                            <div class="stock-summary-item low-stock">
+                                <div class="icon"><i class='bx bx-warning'></i></div>
+                                <div class="count">142</div>
+                                <div class="label">Low Stock</div>
+                            </div>
+                            <div class="stock-summary-item out-stock">
+                                <div class="icon"><i class='bx bx-x-circle'></i></div>
+                                <div class="count">43</div>
+                                <div class="label">Out of Stock</div>
+                            </div>
+                            <div class="stock-summary-item">
+                                <div class="icon" style="background: #dbeafe; color: #3b82f6;"><i
+                                        class='bx bx-category'></i></div>
+                                <div class="count">8</div>
+                                <div class="label">Categories</div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bars -->
+                        <div class="progress-section">
+                            <div class="chart-title">Stock Health by Category</div>
+
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-label">Electronics</span>
+                                    <span class="progress-values">892 / 1,200 items (74%)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill healthy" style="width: 74%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-label">Furniture</span>
+                                    <span class="progress-values">156 / 300 items (52%)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill warning" style="width: 52%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-label">Office Supplies</span>
+                                    <span class="progress-values">89 / 500 items (18%)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill critical" style="width: 18%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-label">Accessories</span>
+                                    <span class="progress-values">245 / 400 items (61%)</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill healthy" style="width: 61%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category Breakdown -->
+                        <div class="category-breakdown">
+                            <div class="chart-title">Top Moving Products</div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <div class="category-dot" style="background: #3b82f6;"></div>
+                                    <span class="category-name">Office Workstation Pro</span>
+                                </div>
+                                <span class="category-count">245 sold</span>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <div class="category-dot" style="background: #10b981;"></div>
+                                    <span class="category-name">Wireless Printer</span>
+                                </div>
+                                <span class="category-count">198 sold</span>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <div class="category-dot" style="background: #8b5cf6;"></div>
+                                    <span class="category-name">Ergonomic Mesh Chair</span>
+                                </div>
+                                <span class="category-count">167 sold</span>
+                            </div>
+
+                            <div class="category-item">
+                                <div class="category-info">
+                                    <div class="category-dot" style="background: #f59e0b;"></div>
+                                    <span class="category-name">A4 Copy Paper (Ream)</span>
+                                </div>
+                                <span class="category-count">142 sold</span>
+                            </div>
+                        </div>
+
+                        <!-- Decision Making Highlights -->
+                        <div class="decision-highlights">
+                            <h4><i class='bx bx-lightbulb'></i> Faster Decision Making</h4>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>Office Supplies at critical level - immediate reorder recommended</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>Electronics stock healthy - focus marketing on Furniture category</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class='bx bx-check-circle'></i>
+                                <span>43 products out of stock - review supplier lead times</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

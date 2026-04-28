@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Gogo's Enterprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Dark Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gogo's Enterprise</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class='bx bx-grid-alt'></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html"><i class='bx bx-box'></i> <span>Inventory</span></a></li>
+                <li><a href="reporting.html"><i class='bx bx-line-chart'></i> <span>Sales</span></a></li>
+                <li><a href="users.html"><i class='bx bx-user'></i> <span>Customers</span></a></li>
+                <li><a href="setting.html" class="active"><i class='bx bx-cog'></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">User Management</h1>
+                <div class="header-actions">
+                    <button class="btn-add-user">
+                        <i class='bx bx-user-plus'></i>
+                        Add New User
+                    </button>
+                </div>
+            </div>
+
+            <!-- Settings Layout -->
+            <div class="settings-layout">
+                <!-- Settings Navigation -->
+                <nav class="settings-nav">
+                    <div class="settings-nav-item active">
+                        <i class='bx bx-users'></i>
+                        <span>System Users</span>
+                        <span class="badge-count">12</span>
+                    </div>
+                    <div class="settings-nav-item">
+                        <i class='bx bx-shield-quarter'></i>
+                        <span>Security Settings</span>
+                    </div>
+                    <div class="settings-nav-item">
+                        <i class='bx bx-key'></i>
+                        <span>Access Control</span>
+                    </div>
+                    <div class="settings-nav-item">
+                        <i class='bx bx-lock-alt'></i>
+                        <span>Authorization</span>
+                    </div>
+                    <div class="settings-nav-item">
+                        <i class='bx bx-history'></i>
+                        <span>Activity Log</span>
+                    </div>
+                </nav>
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Users List Card -->
+                    <div class="users-card">
+                        <div class="card-header">
+                            <h3>System Users</h3>
+                            <input type="text" class="search-input" placeholder="Search users...">
+                        </div>
+                        <div class="users-list">
+                            <div class="user-item active">
+                                <div class="user-avatar admin">JD</div>
+                                <div class="user-info">
+                                    <div class="user-name">John Doe</div>
+                                    <div class="user-email">john.doe@gogoenterprise.com</div>
+                                </div>
+                                <span class="user-role-badge role-administrator">Administrator</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar manager">SM</div>
+                                <div class="user-info">
+                                    <div class="user-name">Sarah Mitchell</div>
+                                    <div class="user-email">sarah.m@gogoenterprise.com</div>
+                                </div>
+                                <span class="user-role-badge role-manager">Manager</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar manager">JK</div>
+                                <div class="user-info">
+                                    <div class="user-name">James Kimani</div>
+                                    <div class="user-email">james.k@gogoenterprise.com</div>
+                                </div>
+                                <span class="user-role-badge role-manager">Manager</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar customer">AW</div>
+                                <div class="user-info">
+                                    <div class="user-name">Alice Wanjiku</div>
+                                    <div class="user-email">alice.w@customer.com</div>
+                                </div>
+                                <span class="user-role-badge role-customer">Customer</span>
+                            </div>
+                            <div class="user-item">
+                                <div class="user-avatar customer">BO</div>
+                                <div class="user-info">
+                                    <div class="user-name">Brian Ochieng</div>
+                                    <div class="user-email">brian.o@customer.com</div>
+                                </div>
+                                <span class="user-role-badge role-customer">Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Settings Card -->
+                    <div class="security-card">
+                        <div class="security-header">
+                            <i class='bx bx-shield-quarter'></i>
+                            <h3>Security Settings - Role-Based Access & Authorization</h3>
+                        </div>
+                        <div class="security-content">
+                            <!-- Role-Based Access Section -->
+                            <div class="access-section">
+                                <h4 class="section-title">
+                                    <i class='bx bx-accessibility'></i>
+                                    Role-Based Access Control (RBAC)
+                                </h4>
+                                <div class="access-grid">
+                                    <div class="access-item">
+                                        <div class="access-item-header">
+                                            <i class='bx bx-crown' style="color: #7c3aed;"></i>
+                                            <span>Administrator</span>
+                                        </div>
+                                        <div class="permission-list">
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Full system access</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Manage all users</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>View & edit all reports</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>System configuration</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Access control settings</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="access-item">
+                                        <div class="access-item-header">
+                                            <i class='bx bx-user-check' style="color: #3b82f6;"></i>
+                                            <span>Manager</span>
+                                        </div>
+                                        <div class="permission-list">
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>View dashboard & reports</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Manage inventory</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Process sales</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-x-circle deny'></i>
+                                                <span>User management</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-x-circle deny'></i>
+                                                <span>System settings</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="access-item">
+                                        <div class="access-item-header">
+                                            <i class='bx bx-user' style="color: #10b981;"></i>
+                                            <span>Customer</span>
+                                        </div>
+                                        <div class="permission-list">
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>View product catalog</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>Place orders</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-check-circle allow'></i>
+                                                <span>View own profile</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-x-circle deny'></i>
+                                                <span>View inventory</span>
+                                            </div>
+                                            <div class="permission-item">
+                                                <i class='bx bx-x-circle deny'></i>
+                                                <span>Access reports</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Authorization Form -->
+                            <div class="access-section">
+                                <h4 class="section-title">
+                                    <i class='bx bx-lock-alt'></i>
+                                    Authorization Controls
+                                </h4>
+                                <form class="auth-form">
+                                    <div class="form-group">
+                                        <label class="form-label">Selected User <span class="required">*</span></label>
+                                        <select class="form-select">
+                                            <option>John Doe (Administrator)</option>
+                                            <option>Sarah Mitchell (Manager)</option>
+                                            <option>James Kimani (Manager)</option>
+                                            <option>Alice Wanjiku (Customer)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Assign Role <span class="required">*</span></label>
+                                        <select class="form-select">
+                                            <option>Administrator</option>
+                                            <option>Manager</option>
+                                            <option>Customer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Module Permissions</label>
+                                        <div class="form-checkbox-group">
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span>Dashboard Access</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span>Inventory Management</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span>Sales & Reporting</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox">
+                                                <span>User Management</span>
+                                            </label>
+                                            <label class="form-checkbox">
+                                                <input type="checkbox">
+                                                <span>System Settings</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn-save">Save Changes</button>
+                                        <button type="button" class="btn-cancel">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Activity Log -->
+                            <div class="activity-log">
+                                <h4 class="section-title">
+                                    <i class='bx bx-history'></i>
+                                    Recent Activity
+                                </h4>
+                                <div class="log-item">
+                                    <div class="log-icon login">
+                                        <i class='bx bx-log-in'></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <div class="log-text">
+                                            <strong>John Doe</strong> logged in from Chrome on Windows
+                                        </div>
+                                        <div class="log-time">Today, 9:45 AM</div>
+                                    </div>
+                                </div>
+                                <div class="log-item">
+                                    <div class="log-icon permission">
+                                        <i class='bx bx-shield'></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <div class="log-text">
+                                            <strong>Sarah Mitchell</strong> permissions updated for Inventory module
+                                        </div>
+                                        <div class="log-time">Today, 8:30 AM</div>
+                                    </div>
+                                </div>
+                                <div class="log-item">
+                                    <div class="log-icon security">
+                                        <i class='bx bx-error'></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <div class="log-text">
+                                            Failed login attempt for <strong>admin@gogo.com</strong> from unknown IP
+                                        </div>
+                                        <div class="log-time">Yesterday, 11:20 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
