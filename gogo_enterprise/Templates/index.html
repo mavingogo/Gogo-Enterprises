@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gogo's Enterprise Dashboard</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons for modern icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- Dark Sidebar -->
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gogo's Enterprise</h2>
+
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class='bx bx-grid-alt'></i> <span>Dashboard</span></a></li>
+                <li><a href="inventory.html"><i class='bx bx-box'></i> <span>Inventory</span></a></li>
+                <li><a href="reporting.html"><i class='bx bx-line-chart'></i> <span>Sales</span></a></li>
+                <li><a href="users.html"><i class='bx bx-user'></i> <span>Customers</span></a></li>
+                <li><a href="setting.html"><i class='bx bx-cog'></i> <span>Settings</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Light Main Content -->
+        <main class="main-content">
+            <!-- Hero section with background image and overlay text -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="title ml-4">Welcome</h1>
+                    <p>This is your business site overview. Track inventory, monitor sales, and manage activities
+                        seamlessly.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dashboard Content -->
+            <section class="dashboard-content">
+
+                <!-- Cards -->
+                <div class="summary-cards">
+                    <div class="card">
+                        <div class="card-icon"><i class='bx bx-package'></i></div>
+                        <div class="card-info">
+                            <h3>Total Products</h3>
+                            <p class="value">12</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon sales-icon"><i class='bx bx-wallet'></i></div>
+                        <div class="card-info">
+                            <h3>Daily Sales(Ksh)</h3>
+                            <p class="value">120,453.50</p>
+                        </div>
+                    </div>
+                    <div class="card alert-card">
+                        <div class="card-icon"><i class='bx bx-error-circle'></i></div>
+                        <div class="card-info">
+                            <h3>Low Stock Alert</h3>
+                            <p class="value">4 Items</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Table -->
+                <div class="recent-activity">
+                    <div class="activity-header">
+                        <h2>Recent Activity</h2>
+                        <button class="view-all-btn">View All</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Item</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount (KES)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>H2-8902</td>
+                                    <td>Office Workstation Pro</td>
+                                    <td>Today, 10:45 AM</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td>1,200.07</td>
+                                </tr>
+                                <tr>
+                                    <td>H2-8901</td>
+                                    <td>Kitchen Sink</td>
+                                    <td>Today, 09:15 AM</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td>4,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>H2-8900</td>
+                                    <td>Laundry Basket</td>
+                                    <td>Yesterday, 16:30 PM</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>4,500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>H2-8899</td>
+                                    <td>Conference Table (6-seater)</td>
+                                    <td>Yesterday, 14:00 PM</td>
+                                    <td><span class="status cancelled">Cancelled</span></td>
+                                    <td>25,000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
